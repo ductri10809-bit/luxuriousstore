@@ -1,0 +1,14 @@
+/* dang_ky.css */
+@import url('dang_nhap.css');
+
+.auth-page .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .auth-page .form-row {
+    grid-template-columns: 1fr;
+  }
+}

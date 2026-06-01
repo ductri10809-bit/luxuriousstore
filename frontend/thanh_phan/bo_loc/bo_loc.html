@@ -1,0 +1,27 @@
+<aside class="bo-loc">
+  <h3 class="bo-loc__title">Bộ lọc</h3>
+  <form id="form-bo-loc">
+    <div class="form-group">
+      <label for="danh-muc">Loại sản phẩm</label>
+      <select id="danh-muc" name="category_id">
+        <option value="">Tất cả</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mau-sac">Màu sắc</label>
+      <select id="mau-sac" name="mau_sac">
+        <option value="">Tất cả màu</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sap-xep">Sắp xếp</label>
+      <select id="sap-xep" name="sort">
+        <option value="moi_nhat">Mới nhất</option>
+        <option value="gia_tang">Giá tăng dần</option>
+        <option value="gia_giam">Giá giảm dần</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:100%">Áp dụng</button>
+    <button type="button" id="bo-loc-reset" class="btn btn-ghost btn-sm" style="width:100%;margin-top:0.5rem">Xóa bộ lọc</button>
+  </form>
+</aside>

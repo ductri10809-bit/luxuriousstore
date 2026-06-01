@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "tieu_de": "Xu huong thoi trang mua thu 2026",
+    "tom_tat": "Kham pha nhung phong cach noi bat trong mua thu nam nay.",
+    "noi_dung": "Noi dung chi tiet bai viet tin tuc mau.",
+    "hinh_anh": "../../tai_nguyen/hinh_anh/tin-tuc-1.jpg",
+    "ngay_dang": "2026-05-01"
+  },
+  {
+    "id": 2,
+    "tieu_de": "Bo suu tap luxury moi",
+    "tom_tat": "Nhung thiet ke cao cap vua duoc ra mat.",
+    "noi_dung": "Noi dung chi tiet bai viet tin tuc mau thu hai.",
+    "hinh_anh": "../../tai_nguyen/hinh_anh/tin-tuc-2.jpg",
+    "ngay_dang": "2026-05-15"
+  }
+]

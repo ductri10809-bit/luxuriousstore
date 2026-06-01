@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng — LUXURIOUS STORE</title>
+  <link rel="stylesheet" href="../../css/bien.css">
+  <link rel="stylesheet" href="../../css/chung.css">
+  <link rel="stylesheet" href="../../css/tien_ich.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/thanh_phan/header.css">
+  <link rel="stylesheet" href="../../css/thanh_phan/footer.css">
+  <link rel="stylesheet" href="../../css/trang/gio_hang.css">
+  <style>
+    /* Style nhẹ cho nút đóng popup (nếu chưa có trong file CSS chính) */
+    .close-success-btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.2s;
+      padding: 0 8px;
+    }
+    .close-success-btn:hover {
+      color: #b3002f;
+    }
+    .order-success__box {
+      position: relative;
+      background: white;
+      padding: 2rem 2rem 2rem 2rem;
+      border-radius: 12px;
+      max-width: 480px;
+      margin: 2rem auto;
+      text-align: center;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+    }
+    .order-success {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    .order-success[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+  <main class="container cart-page">
+    <h1 class="section-title" style="margin-top:2rem">Giỏ hàng</h1>
+    <div class="cart-layout">
+      <section class="cart-items">
+        <div id="cart-empty" class="cart-empty" hidden>
+          <p>Giỏ hàng của bạn đang trống.</p>
+          <a href="../san_pham/san_pham.html" class="btn">Tiếp tục mua sắm</a>
+        </div>
+        <div id="cart-list" class="cart-list"></div>
+      </section>
+      <aside class="cart-sidebar">
+        <div class="cart-summary">
+          <p class="cart-summary__row"><span>Tạm tính</span><span id="cart-subtotal">0 ₫</span></p>
+          <p class="cart-summary__row cart-summary__total"><span>Tổng cộng</span><span id="cart-total">0 ₫</span></p>
+        </div>
+        <form id="form-dat-hang" class="checkout-form">
+          <h2>Thông tin giao hàng</h2>
+          <p class="checkout-note">Điền đầy đủ để đặt hàng (không bắt buộc đăng nhập).</p>
+          <div class="form-group">
+            <label for="ho-ten">Họ và tên *</label>
+            <input type="text" id="ho-ten" name="ho_ten" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="sdt">Số điện thoại *</label>
+            <input type="tel" id="sdt" name="sdt" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="dia-chi">Địa chỉ giao hàng *</label>
+            <textarea id="dia-chi" name="dia_chi" rows="3" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="ghi-chu">Ghi chú đơn hàng</label>
+            <textarea id="ghi-chu" name="ghi_chu" rows="2" placeholder="Tùy chọn"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%" id="btn-dat-hang">Đặt hàng</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+  <div id="footer"></div>
+
+  <!-- Popup thông báo thành công (đã thêm nút X) -->
+  <div id="order-success" class="order-success" hidden>
+    <div class="order-success__box">
+      <button class="close-success-btn" aria-label="Đóng thông báo" ><a href="gio_hang.html">x</a></button>
+      <h2>Cảm ơn bạn!</h2>
+      <p id="order-success-msg">Đơn hàng đã được ghi nhận.</p>
+      <a href="../san_pham/san_pham.html" class="btn">Tiếp tục mua sắm</a>
+    </div>
+  </div>
+
+  <!-- Các file JS chính -->
+  <script src="../../js/tai_component.js"></script>
+  <script src="../../js/chung.js"></script>
+  <script src="../../js/gio_hang.js"></script>
+  <script src="../../js/yeu_thich.js"></script>
+  <script src="../../js/thanh_phan/header.js"></script>
+  <script src="../../js/trang/gio_hang.js"></script>
+  <!-- File JS xử lý đóng popup (đã tách riêng) -->
+  <script src="../../js/popup_close.js"></script>
+</body>
+</html>
